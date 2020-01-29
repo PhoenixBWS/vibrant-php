@@ -29,13 +29,13 @@ $exception: _boolean_ : _Optional (Default: true)_ : If in case, no colours matc
 ### Return Value:
 
 A successful vibrant() call will always return an array with RGB colors in it. An example return value is like:
-
+```
 array(  
   [0] => 200,  
   [1] => 180,  
   [2] => 150  
  )
-
+```
 # Special Thanks:
 Special thanks to my colleagues at [Bengal Web Solution](https://bengalwebsolution.com) for letting me have enough time for my own experiments, and my love - M for always supporting me and believing in me.
 
