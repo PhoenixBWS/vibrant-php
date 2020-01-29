@@ -1,14 +1,16 @@
 # vibrant-php
-Pick the particular color from an image which contains your desired lightness and saturation. It is something like the awesome palette class in Android  (https://developer.android.com/reference/android/support/v7/graphics/Palette.html) or vibrant.js (https://jariz.github.io/vibrant.js/) but instead it returns only one color based on your own demand.
+Pick the particular color from an image which contains your desired lightness and saturation. It is something like the awesome [palette class in Android](https://developer.android.com/reference/android/support/v7/graphics/Palette.html) or [vibrant.js](https://jariz.github.io/vibrant.js/) but instead it returns only one color based on your own demand.
 
 # Dependency:
-This PHP function is dependent on @brendonheyer's (https://gist.github.com/brandonheyer) rgbToHsl.php (https://gist.github.com/brandonheyer/5254516) and it must be included before vibrant.php. Thanks to him for it saved a lot of time.
+This PHP function is dependent on [@brendonheyer's](https://gist.github.com/brandonheyer) [rgbToHsl.php](https://gist.github.com/brandonheyer/5254516) and it must be included before vibrant.php. Thanks to him for it saved a lot of time.
 
-# Usage:
+# Usage
+
+### Basic:
 
 vibrant('path/to/image.jpg');
 
-This is the basic usage of the function. However, vibrant() has a total of 8 parameters and these are -
+### All Parameters:
 
 $image_source: _String_: _Required_ : Path to an image;  
 $square_block: _Int_: _Optional (Default: 8)_ : An integer that determines the dimensions of the resampled square image. (E.g. 8 will generate 8x8 image).  
@@ -20,11 +22,11 @@ $min_saturation: _Float_: _Optional (Default: 0)_ : Minimum saturation of the ta
 $max_saturation: _Float_: _Optional (Default: 1)_ : Maximum saturation of the target color  
 $exception: _boolean_ : _Optional (Default: true)_ : If in case, no colours match the exact criteria set by min and max lightness and saturation, then return a color that goes beyond those limitations and that is only influenced by the $target_lightness and $target_saturation.
 
-*Advanced Use Example:*
+### Advanced Use Example:
 
 vibrant('path/to/image.jpg', 10, 0.4, 0.2, 0.6, 0.75, 0.5, 1, false);
 
-*Return Value*
+### Return Value:
 
 A successful vibrant() call will always return an array with RGB colors in it. An example return value is like:
 
