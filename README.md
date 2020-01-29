@@ -8,10 +8,10 @@ This PHP function is dependent on [@brendonheyer's](https://gist.github.com/bran
 
 ### Basic:
 
-vibrant('path/to/image.jpg');
+> vibrant('path/to/image.jpg');
 
 ### All Parameters:
-
+```
 $image_source: _String_: _Required_ : Path to an image;  
 $square_block: _Int_: _Optional (Default: 8)_ : An integer that determines the dimensions of the resampled square image. (E.g. 8 will generate 8x8 image).  
 $target_lightness: _Float_: _Optional (Default: 0.5)_ : The goal for lightness of the target color  
@@ -21,10 +21,10 @@ $target_saturation: _Float_: _Optional (Default: 1)_ : The goal for saturation o
 $min_saturation: _Float_: _Optional (Default: 0)_ : Minimum saturation of the target color  
 $max_saturation: _Float_: _Optional (Default: 1)_ : Maximum saturation of the target color  
 $exception: _boolean_ : _Optional (Default: true)_ : If in case, no colours match the exact criteria set by min and max lightness and saturation, then return a color that goes beyond those limitations and that is only influenced by the $target_lightness and $target_saturation.
-
+```
 ### Advanced Use Example:
 
-vibrant('path/to/image.jpg', 10, 0.4, 0.2, 0.6, 0.75, 0.5, 1, false);
+> vibrant('path/to/image.jpg', 10, 0.4, 0.2, 0.6, 0.75, 0.5, 1, false);
 
 ### Return Value:
 
@@ -37,7 +37,7 @@ array(
  )
 
 # Special Thanks:
-Special thanks to my colleagues at Bengal Web Solution (https://bengalwebsolution.com) for letting me have enough time for my own experiments, and my love - M for always supporting me and believing in me.
+Special thanks to my colleagues at [Bengal Web Solution](https://bengalwebsolution.com) for letting me have enough time for my own experiments, and my love - M for always supporting me and believing in me.
 
 For any support, please visit http://itsamlan.com to contact me.
 Thanks to everyone.
