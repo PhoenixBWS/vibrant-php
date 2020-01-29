@@ -10,14 +10,14 @@ vibrant('path/to/image.jpg');
 
 This is the basic usage of the function. However, vibrant() has a total of 8 parameters and these are -
 
-$image_source: _String_: _Required_ : Path to an image;
-$square_block: _Int_: _Optional (Default: 8)_ : An integer that determines the dimensions of the resampled square image. (E.g. 8 will generate 8x8 image).
-$target_lightness: _Float_: _Optional (Default: 0.5)_ : The goal for lightness of the target color
-$min_lightness: _Float_: _Optional (Default: 0.31)_ : Minimum lightness of the target color
-$max_lightness: _Float_: _Optional (Default: 0.69)_ : Maximum lightness of the target color
-$target_saturation: _Float_: _Optional (Default: 1)_ : The goal for saturation of the target color
-$min_saturation: _Float_: _Optional (Default: 0)_ : Minimum saturation of the target color
-$max_saturation: _Float_: _Optional (Default: 1)_ : Maximum saturation of the target color
+$image_source: _String_: _Required_ : Path to an image;  
+$square_block: _Int_: _Optional (Default: 8)_ : An integer that determines the dimensions of the resampled square image. (E.g. 8 will generate 8x8 image).  
+$target_lightness: _Float_: _Optional (Default: 0.5)_ : The goal for lightness of the target color  
+$min_lightness: _Float_: _Optional (Default: 0.31)_ : Minimum lightness of the target color  
+$max_lightness: _Float_: _Optional (Default: 0.69)_ : Maximum lightness of the target color  
+$target_saturation: _Float_: _Optional (Default: 1)_ : The goal for saturation of the target color  
+$min_saturation: _Float_: _Optional (Default: 0)_ : Minimum saturation of the target color  
+$max_saturation: _Float_: _Optional (Default: 1)_ : Maximum saturation of the target color  
 $exception: _boolean_ : _Optional (Default: true)_ : If in case, no colours match the exact criteria set by min and max lightness and saturation, then return a color that goes beyond those limitations and that is only influenced by the $target_lightness and $target_saturation.
 
 *Advanced Use Example:*
@@ -28,10 +28,10 @@ vibrant('path/to/image.jpg', 10, 0.4, 0.2, 0.6, 0.75, 0.5, 1, false);
 
 A successful vibrant() call will always return an array with RGB colors in it. An example return value is like:
 
-array(
-  [0] => 200,
-  [1] => 180,
-  [2] => 150
+array(  
+  [0] => 200,  
+  [1] => 180,  
+  [2] => 150  
  )
 
 # Special Thanks:
