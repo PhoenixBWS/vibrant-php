@@ -55,7 +55,7 @@ function vibrant($image_source, $square_block = 8, $target_lightness = 0.5, $min
 		$rgbfromunique = explode(",", $uniqueone);
 		$hsl_uniquecolors = rgbToHsl($rgbfromunique[0], $rgbfromunique[1], $rgbfromunique[2]);
 		
-		if((abs($target_lightness - $hsl_uniquecolors[2]) <= $nearest_light) && ($hsl_uniquecolors[2] >= $min_lightness) && ($hsl_uniquecolors[2] <= $max_lightness) && (abs($target_saturation - $hsl_uniquecolors[1]) <= $nearest_saturation) && ($hsl_uniquecolors[1] >= $min_saturation) && ($hsl_uniquecolors[1] <= $max_saturation))
+		if((abs($target_lightness - $hsl_uniquecolors[2]) < $nearest_light) && ($hsl_uniquecolors[2] >= $min_lightness) && ($hsl_uniquecolors[2] <= $max_lightness) && (abs($target_saturation - $hsl_uniquecolors[1]) < $nearest_saturation) && ($hsl_uniquecolors[1] >= $min_saturation) && ($hsl_uniquecolors[1] <= $max_saturation))
 		{
 			$nearest_light = abs(0.5 - $hsl_uniquecolors[2]);
 			$nearest_saturation = abs($target_saturation - $hsl_uniquecolors[1]);
@@ -74,7 +74,7 @@ function vibrant($image_source, $square_block = 8, $target_lightness = 0.5, $min
 				$rgbfromunique = explode(",", $uniqueone);
 				$hsl_uniquecolors = rgbToHsl($rgbfromunique[0], $rgbfromunique[1], $rgbfromunique[2]);
 
-				if((abs($target_lightness - $hsl_uniquecolors[2]) <= $nearest_light) && (abs($target_saturation - $hsl_uniquecolors[1]) <= $nearest_saturation))
+				if((abs($target_lightness - $hsl_uniquecolors[2]) < $nearest_light) && (abs($target_saturation - $hsl_uniquecolors[1]) < $nearest_saturation))
 				{
 					$nearest_light = abs(0.5 - $hsl_uniquecolors[2]);
 					$nearest_saturation = abs($target_saturation - $hsl_uniquecolors[1]);
